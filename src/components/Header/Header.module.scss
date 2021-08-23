@@ -1,0 +1,94 @@
+.header {
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #0a141c;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 50px;
+    }
+
+    .separator {
+      width: 3px;
+      height: 100%;
+      margin-right: 15px;
+      margin-left: 15px;
+      background-color: #2036ff;
+    }
+
+    .p1 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 200;
+
+      span {
+        color: #2036ff;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .navTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .navBtn {
+      color: #2036ff;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      margin-right: 38px;
+    }
+
+    .profileBtn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 20px;
+      cursor: pointer;
+
+      .avatar {
+        width: 100%;
+        height: 100%;
+        max-width: 20px;
+        margin-right: 8px;
+      }
+
+      .name {
+        color: #2036ff;
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 8px;
+      }
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .separator,
+  .p1 {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 0 30px;
+  }
+}

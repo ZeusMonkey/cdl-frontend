@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    color: #2036ff;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .details {
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .marketSize {
+      width: calc((100% - 120px) / 2);
+
+      &Label {
+        display: block;
+        color: #2036ff;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+
+      &Value {
+        color: #333;
+        font-size: 32px;
+        font-weight: 300;
+      }
+    }
+
+    .score {
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      background-color: #2036ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &Value {
+        color: #fff;
+        font-size: 48px;
+      }
+    }
+
+    .balanceDetails {
+      width: calc((100% - 100px) / 2);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+
+      .balance {
+        color: #999;
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .borrowDetails {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+
+    .borrowLabel {
+      color: #2036ff;
+      font-size: 12px;
+      font-weight: 300;
+      margin-right: 15px;
+    }
+
+    .borrowPercent,
+    .borrowAmount {
+      color: #666;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    .borrowProgress {
+      flex-grow: 1;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 20px;
+      background-color: #eee;
+      border-radius: 4px;
+      position: relative;
+
+      &Active {
+        position: absolute;
+        width: calc((100% - 4px) / 100 * var(--borrow-percent));
+        height: 16px;
+        left: 2px;
+        top: 2px;
+        border-radius: 3px;
+        background-color: #2036ff;
+      }
+    }
+  }
+}
+
+@media (max-width: 887px) {
+  .container {
+    .details {
+      padding: 0;
+      flex-direction: column;
+
+      .marketSize {
+        width: 100%;
+        text-align: center;
+      }
+
+      .score {
+        margin: 10px;
+      }
+
+      .balanceDetails {
+        width: 100%;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    .details {
+      padding: 0;
+    }
+
+    .borrowDetails {
+      padding: 0;
+    }
+  }
+}

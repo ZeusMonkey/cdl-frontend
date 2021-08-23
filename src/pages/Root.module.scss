@@ -1,0 +1,26 @@
+.containerWrapper {
+  padding: 30px 60px 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .containerWrapper {
+    padding: 20px 40px 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .containerWrapper {
+    padding: 20px 0 0;
+  }
+}

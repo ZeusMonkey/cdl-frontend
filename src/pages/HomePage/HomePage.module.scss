@@ -1,0 +1,193 @@
+.container {
+  padding-top: 60px;
+
+  .title {
+    color: #2036ff;
+    font-size: 40px;
+    line-height: 54px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 24px 0;
+  }
+
+  .tableHeader {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      color: #2036ff;
+      font-size: 22px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .connectWallet {
+      height: 40px;
+      padding: 0 20px;
+      box-sizing: border-box;
+      background-color: transparent;
+      border: 1.5px solid #2036ff;
+      border-radius: 4px;
+      outline: none;
+      color: #2036ff;
+      font-size: 18px;
+      font-weight: 300;
+      cursor: pointer;
+    }
+  }
+
+  .tableWrapper {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px 40px 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  .tableContainer {
+    width: 100%;
+    box-shadow: none;
+
+    .table {
+      border-collapse: separate;
+      border-spacing: 0 12px;
+
+      &Cell {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 18px;
+        color: #666;
+        background-color: #f2f4f6;
+        border: none;
+
+        &.firstCell {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+
+        &.lastCell {
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+
+        .btnAddLiquidity,
+        .btnBorrow {
+          width: 130px;
+          height: 40px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          border-radius: 4px;
+          outline: none;
+          border: none;
+          font-family: 'Work Sans', sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          cursor: pointer;
+
+          svg {
+            display: none;
+          }
+        }
+
+        .btnAddLiquidity {
+          background-color: #e0e0e0;
+          color: #808080;
+          margin-right: 15px;
+        }
+
+        .btnBorrow {
+          background-color: #2036ff;
+          color: #fff;
+        }
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+
+        .logo {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    .tableContainer {
+      .table {
+        .btnAddLiquidity,
+        .btnBorrow {
+          width: 40px;
+
+          svg {
+            display: inline-block;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 887px) {
+  .container {
+    .tableHeaderCell:nth-child(2),
+    .tableCell:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    .title {
+      text-align: center;
+      font-size: 36px;
+      line-height: 48px;
+      margin: 18px 0;
+    }
+    .tableWrapper {
+      padding: 15px;
+    }
+    .tableContainer {
+      .table {
+        &Cell {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    .tableHeader {
+      padding: 0 20px;
+    }
+    .tableContainer {
+      .table {
+        .info {
+          .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 0;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
